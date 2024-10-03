@@ -1,7 +1,7 @@
 
 var sec = document.querySelector("#sec")
-var num2 = document.querySelector("#min")
-var num3 = document.querySelector("#hrs")
+var num2 = document.querySelector("#num2")
+var num3 = document.querySelector("#num3")
 
 
 
@@ -17,20 +17,22 @@ function startTime(){
     sec.innerHTML = num
     
     if (num === 60) {
-        min += ":" + 1
+        min +=  1
         num = 0 
+        num2.innerHTML = `:${min}`
     }
    
 
     if (min === 60) {
-        hrs += ":" + 1
+        hrs +=  1
         min = 0
+        num3.innerHTML = `:${hrs}`
     }
 
 
 
 
-}, 100)
+}, 1000)
 }
 
 function stopTime(){
